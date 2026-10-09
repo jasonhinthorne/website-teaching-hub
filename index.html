@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuildWebs | Make Websites That Break Reality</title>
+    <meta
+      name="description"
+      content="Learn to build websites with mind-bending 3D effects, pranks, loopholes, and reality-defying features."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="canvas-bg"></div>
+    <div class="floating-orbs"></div>
+
+    <header class="site-header">
+      <nav class="nav container">
+        <div class="logo glitch" data-text="BuildWebs">BuildWebs</div>
+        <div class="nav-links">
+          <a href="#categories" class="nav-link">Categories</a>
+          <a href="#pranks" class="nav-link">Pranks</a>
+          <a href="#loopholes" class="nav-link">Loopholes</a>
+          <a href="#showcase" class="nav-link">Showcase</a>
+        </div>
+        <button class="nav-button flip-button">Start Chaos</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO SECTION WITH 3D FLIP -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow floating">Learn to Build Websites</span>
+            <h1 class="hero-title glitch-text">
+              Websites that break the internet <span class="flip-text">reality</span>
+            </h1>
+            <p class="hero-description">
+              Master 3D effects, impossible interactions, harmless pranks, and
+              legal loopholes. Learn what websites can actually do when you
+              think outside the box.
+            </p>
+
+            <div class="hero-actions">
+              <button class="primary-btn pulse-btn" onclick="scrollToSection('categories')">
+                Explore Madness
+              </button>
+              <button class="secondary-btn reveal-btn" onclick="revealSecret()">
+                Reveal Secret
+              </button>
+            </div>
+
+            <div class="stats rotating">
+              <div class="stat-item">
+                <strong class="counter" data-target="8">0</strong>
+                <span>Categories</span>
+              </div>
+              <div class="stat-item">
+                <strong class="counter" data-target="15">0</strong>
+                <span>Pranks</span>
+              </div>
+              <div class="stat-item">
+                <strong class="counter" data-target="12">0</strong>
+                <span>Loopholes</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="perspective-card">
+              <div class="card-3d">
+                <div class="card-face front">
+                  <div class="neon-cube"></div>
+                </div>
+                <div class="card-face back">
+                  <div class="matrix-rain"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE CATEGORY SELECTOR -->
+      <section id="categories" class="categories section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">What Do You Want to Build?</span>
+            <h2 class="section-title">Pick Your Poison</h2>
+          </div>
+
+          <div class="category-selector">
+            <div class="selector-buttons">
+              <button class="selector-btn active" data-category="all">All</button>
+              <button class="selector-btn" data-category="practical">Practical</button>
+              <button class="selector-btn" data-category="wild">Wild Ideas</button>
+              <button class="selector-btn" data-category="money">Make Money</button>
+            </div>
+          </div>
+
+          <div class="category-grid">
+            <div class="category-card 3d-card practical" data-category="practical">
+              <div class="card-inner">
+                <span class="icon">📱</span>
+                <h3>App Development</h3>
+                <p>Build tools, dashboards, and features that people actually use.</p>
+                <div class="card-tags">
+                  <span class="tag">Practical</span>
+                  <span class="tag">Job Ready</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="category-card 3d-card practical" data-category="practical">
+              <div class="card-inner">
+                <span class="icon">🌐</span>
+                <h3>Social Media</h3>
+                <p>Create communities, platforms, and viral experiences.</p>
+                <div class="card-tags">
+                  <span class="tag">Practical</span>
+                  <span class="tag">Growth</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="category-card 3d-card wild" data-category="wild">
+              <div class="card-inner">
+                <span class="icon">🎮</span>
+                <h3>Games</h3>
+                <p>Browser games, interactive playgrounds, and impossible mechanics.</p>
+                <div class="card-tags">
+                  <span class="tag">Wild</span>
+                  <span class="tag">Fun</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="category-card 3d-card money" data-category="money">
+              <div class="card-inner">
+                <span class="icon">💼</span>
+                <h3>Business Models</h3>
+                <p>Learn how websites make money and scale to millions.</p>
+                <div class="card-tags">
+                  <span class="tag">Money</span>
+                  <span class="tag">Scale</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="category-card 3d-card money" data-category="money">
+              <div class="card-inner">
+                <span class="icon">💸</span>
+                <h3>Buying & Selling</h3>
+                <p>Ecommerce, marketplaces, and online transaction magic.</p>
+                <div class="card-tags">
+                  <span class="tag">Money</span>
+                  <span class="tag">Ecom</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="category-card 3d-card wild" data-category="wild">
+              <div class="card-inner">
+                <span class="icon">😄</span>
+                <h3>Just for Fun</h3>
+                <p>Weird, playful, and delightfully useless websites.</p>
+                <div class="card-tags">
+                  <span class="tag">Wild</span>
+                  <span class="tag">Humor</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="category-card 3d-card wild" data-category="wild">
+              <div class="card-inner">
+                <span class="icon">🎯</span>
+                <h3>Nuanced Niches</h3>
+                <p>Hyper-specific communities and vertical markets.</p>
+                <div class="card-tags">
+                  <span class="tag">Wild</span>
+                  <span class="tag">Niche</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="category-card 3d-card practical" data-category="practical">
+              <div class="card-inner">
+                <span class="icon">✨</span>
+                <h3>Other</h3>
+                <p>Experiments, pranks, and ideas that don't fit boxes.</p>
+                <div class="card-tags">
+                  <span class="tag">Practical</span>
+                  <span class="tag">Wild</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRANKS SECTION -->
+      <section id="pranks" class="pranks section alt-bg">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">🤣 Harmless Pranks You Can Build</span>
+            <h2 class="section-title">Make People Smile (and Confused)</h2>
+          </div>
+
+          <div class="pranks-grid">
+            <div class="prank-card expandable">
+              <div class="prank-header" onclick="expandCard(this)">
+                <span class="prank-icon">🪞</span>
+                <h3>Mirror Site</h3>
+                <span class="expand-icon">+</span>
+              </div>
+              <div class="prank-content hidden">
+                <p>Make a website that copies everything the user does in real-time using JS event listeners and the Clipboard API. They think they're controlling it, but you are.</p>
+                <code>// Captures all movements & echoes them back</code>
+                <button class="try-btn" onclick="openDemo('mirror')">Try Demo</button>
+              </div>
+            </div>
+
+            <div class="prank-card expandable">
+              <div class="prank-header" onclick="expandCard(this)">
+                <span class="prank-icon">🎪</span>
+                <h3>Gravity Reverse</h3>
+                <span class="expand-icon">+</span>
+              </div>
+              <div class="prank-content hidden">
+                <p>Use CSS transforms and JS physics to make everything fall up instead of down. Buttons float away, text rises, and the whole page defies gravity.</p>
+                <code>// transform: translateY(-100px) per frame</code>
+                <button class="try-btn" onclick="openDemo('gravity')">Try Demo</button>
+              </div>
+            </div>
+
+            <div class="prank-card expandable">
+              <div class="prank-header" onclick="expandCard(this)">
+                <span class="prank-icon">🔊</span>
+                <h3>Sound Surprise</h3>
+                <span class="expand-icon">+</span>
+              </div>
+              <div class="prank-content hidden">
+                <p>Play random sounds when users interact with the page. A bark, a laugh, a whoosh. Pure chaos that's totally reversible.</p>
+                <code>// Random audio from array on every click</code>
+                <button class="try-btn" onclick="openDemo('sound')">Try Demo</button>
+              </div>
+            </div>
+
+            <div class="prank-card expandable">
+              <div class="prank-header" onclick="expandCard(this)">
+                <span class="prank-icon">🎨</span>
+                <h3>Rainbow Chaos</h3>
+                <span class="expand-icon">+</span>
+              </div>
+              <div class="prank-content hidden">
+                <p>Every keystroke changes the page color to a random hue. Type fast and watch it strobo. No way to stop it without refreshing.</p>
+                <code>// hsl(Math.random() * 360, 100%, 50%)</code>
+                <button class="try-btn" onclick="openDemo('rainbow')">Try Demo</button>
+              </div>
+            </div>
+
+            <div class="prank-card expandable">
+              <div class="prank-header" onclick="expandCard(this)">
+                <span class="prank-icon">👁️</span>
+                <h3>Eyes Follow You</h3>
+                <span class="expand-icon">+</span>
+              </div>
+              <div class="prank-content hidden">
+                <p>Add creepy eyes to buttons that track your mouse movement. Use basic trigonometry to make them stare at you.</p>
+                <code>// atan2(mouseY - eyeY, mouseX - eyeX)</code>
+                <button class="try-btn" onclick="openDemo('eyes')">Try Demo</button>
+              </div>
+            </div>
+
+            <div class="prank-card expandable">
+              <div class="prank-header" onclick="expandCard(this)">
+                <span class="prank-icon">📍</span>
+                <h3>Cursor Escape</h3>
+                <span class="expand-icon">+</span>
+              </div>
+              <div class="prank-content hidden">
+                <p>When the user tries to hover over a button, it runs away from the cursor. They can never click it. Maddening.</p>
+                <code>// Move button position on mouseover</code>
+                <button class="try-btn" onclick="openDemo('escape')">Try Demo</button>
+              </div>
+            </div>
+
+            <div class="prank-card expandable">
+              <div class="prank-header" onclick="expandCard(this)">
+                <span class="prank-icon">💬</span>
+                <h3>Fake Errors</h3>
+                <span class="expand-icon">+</span>
+              </div>
+              <div class="prank-content hidden">
+                <p>Show fake crash screens, system errors, or "your computer has been hacked" warnings. JavaScript shenanigans.</p>
+                <code>// CSS to look like Windows/Mac errors</code>
+                <button class="try-btn" onclick="openDemo('errors')">Try Demo</button>
+              </div>
+            </div>
+
+            <div class="prank-card expandable">
+              <div class="prank-header" onclick="expandCard(this)">
+                <span class="prank-icon">🔄</span>
+                <h3>Infinite Scroll Trap</h3>
+                <span class="expand-icon">+</span>
+              </div>
+              <div class="prank-content hidden">
+                <p>Create an infinite scroll that never ends. New content loads forever. Lazy load jokes instead of real content.</p>
+                <code>// IntersectionObserver creates endless items</code>
+                <button class="try-btn" onclick="openDemo('scroll')">Try Demo</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOOPHOLES SECTION -->
+      <section id="loopholes" class="loopholes section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">🕳️ Legal Loopholes & Exploitable Ideas</span>
+            <h2 class="section-title">How Websites Bend Rules (Legally)</h2>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>✅ The "Free Trial" Loophole</span>
+                <span class="indicator">→</span>
+              </button>
+              <div class="accordion-content hidden">
+                <div class="content-inner">
+                  <p>
+                    Offer a free trial that requires no credit card upfront. When it converts to paid, most users forget to cancel. Legal? Yes, if you tell them. Smart? Absolutely.
+                  </p>
+                  <p><strong>Example:</strong> Netflix, Spotify, every SaaS ever.</p>
+                  <p>
+                    <strong>How to implement:</strong> Freemium model + email reminders + one-click cancel.
+                  </p>
+                  <code>// Track trial end date, auto-convert on day 31</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>📧 The "Pre-checked Boxes" Loophole</span>
+                <span class="indicator">→</span>
+              </button>
+              <div class="accordion-content hidden">
+                <div class="content-inner">
+                  <p>
+                    You can pre-check boxes for marketing emails or upsells. The law says you need consent, but if it's unchecked by default and the user checks it, that's consent.
+                  </p>
+                  <p><strong>Ethical Move:</strong> Keep them unchecked. More consent = better brand.</p>
+                  <code>// &lt;input type="checkbox"&gt; // NOT checked by default</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>💰 The "Price Anchoring" Loophole</span>
+                <span class="indicator">→</span>
+              </button>
+              <div class="accordion-content hidden">
+                <div class="content-inner">
+                  <p>
+                    Show the "full price" crossed out next to your actual price. Humans think they're getting a deal even if you just made up that number. It's psychological manipulation that's totally legal.
+                  </p>
+                  <p>
+                    <strong>Example:</strong> ~~$99~~ Now just $29/month! (You invented the $99 price.)
+                  </p>
+                  <code>// &lt;span style="text-decoration: line-through"&gt;$99&lt;/span&gt;</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>🤖 The "Bot Traffic" Loophole</span>
+                <span class="indicator">→</span>
+              </button>
+              <div class="accordion-content hidden">
+                <div class="content-inner">
+                  <p>
+                    You can inflate your traffic numbers by generating fake pageviews with JavaScript. Technically illegal for ad fraud, but for your own metrics? Nobody knows.
+                  </p>
+                  <p>
+                    <strong>Better idea:</strong> Use bots to test your own site and track real user behavior instead.
+                  </p>
+                  <code>// Don't actually do this lol</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>🔐 The "GDPR Cookie" Loophole</span>
+                <span class="indicator">→</span>
+              </button>
+              <div class="accordion-content hidden">
+                <div class="content-inner">
+                  <p>
+                    You technically need cookie consent, but you can make the "Reject" button tiny and the "Accept" button huge. It's in a legal grey area but some sites do it anyway.
+                  </p>
+                  <p><strong>Smart Play:</strong> Make both buttons equal size and obvious. Better UX + legal protection.</p>
+                  <code>// Make both CTA buttons equally prominent</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>⭐ The "Fake Reviews" Loophole</span>
+                <span class="indicator">→</span>
+              </button>
+              <div class="accordion-content hidden">
+                <div class="content-inner">
+                  <p>
+                    Show fake testimonials and reviews. If you're a startup with no real users, you can write them yourself (but you can't claim they're real).
+                  </p>
+                  <p><strong>Legal way:</strong> Use stock photos and generic quotes as "examples" or "testimonials from similar users."</p>
+                  <code>// Make it clear these are examples, not real reviews</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>📱 The "Mobile-Only Upsell" Loophole</span>
+                <span class="indicator">→</span>
+              </button>
+              <div class="accordion-content hidden">
+                <div class="content-inner">
+                  <p>
+                    Show your premium feature ONLY on mobile, where people are more likely to impulse buy. Hide the pricing on desktop.
+                  </p>
+                  <p><strong>How:</strong> Use CSS media queries to show/hide pricing and features.</p>
+                  <code>// @media (max-width: 768px) { show premium cta }</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHOWCASE SECTION -->
+      <section id="showcase" class="showcase section alt-bg">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">🚀 What Websites Can ACTUALLY Do</span>
+            <h2 class="section-title">Reality Bending Features</h2>
+          </div>
+
+          <div class="showcase-grid">
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">3D Magic</div>
+              <h3>3D Rendering in Browser</h3>
+              <p>WebGL and Three.js let you render full 3D models, spin products, and create impossible visuals—all in the browser.</p>
+              <div class="feature-list">
+                <span>✓ Real-time 3D</span>
+                <span>✓ Physics Engine</span>
+                <span>✓ Lighting</span>
+              </div>
+            </div>
+
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">AI Powers</div>
+              <h3>AI Integration</h3>
+              <p>Chat with ChatGPT, generate images, transcribe audio—all from your website without a backend.</p>
+              <div class="feature-list">
+                <span>✓ GPT-4 API</span>
+                <span>✓ Image Gen</span>
+                <span>✓ Voice AI</span>
+              </div>
+            </div>
+
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">Hardware Access</div>
+              <h3>Device Control</h3>
+              <p>Access camera, microphone, GPS, accelerometer, and vibration—turning your phone into an extension of the website.</p>
+              <div class="feature-list">
+                <span>✓ Camera Access</span>
+                <span>✓ Geolocation</span>
+                <span>✓ Vibration</span>
+              </div>
+            </div>
+
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">Offline Magic</div>
+              <h3>Works Offline</h3>
+              <p>Service Workers cache your entire app. Users can work offline and sync when reconnected.</p>
+              <div class="feature-list">
+                <span>✓ Service Workers</span>
+                <span>✓ Local Storage</span>
+                <span>✓ IndexedDB</span>
+              </div>
+            </div>
+
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">Real-time Sync</div>
+              <h3>Live Multiplayer</h3>
+              <p>WebSockets and WebRTC enable real-time collaboration, live chats, and multiplayer games—pure browser magic.</p>
+              <div class="feature-list">
+                <span>✓ WebSockets</span>
+                <span>✓ WebRTC</span>
+                <span>✓ Live Updates</span>
+              </div>
+            </div>
+
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">Money Magic</div>
+              <h3>Built-in Payments</h3>
+              <p>Accept payments directly in the browser with Stripe, PayPal, Apple Pay, and Google Pay—no backend needed.</p>
+              <div class="feature-list">
+                <span>✓ Stripe</span>
+                <span>✓ Apple Pay</span>
+                <span>✓ Google Pay</span>
+              </div>
+            </div>
+
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">Blockchain</div>
+              <h3>Web3 & Crypto</h3>
+              <p>Connect to wallets, mint NFTs, and interact with smart contracts directly from your website.</p>
+              <div class="feature-list">
+                <span>✓ Wallet Connect</span>
+                <span>✓ NFT Minting</span>
+                <span>✓ Smart Contracts</span>
+              </div>
+            </div>
+
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">Impossible UX</div>
+              <h3>Mind-Bending Interfaces</h3>
+              <p>Animation, parallax, scroll hijacking, and 3D CSS transforms create experiences impossible on other platforms.</p>
+              <div class="feature-list">
+                <span>✓ GSAP</span>
+                <span>✓ Framer Motion</span>
+                <span>✓ 3D CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE CHOICE FLOW -->
+      <section class="choices section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Choose Your Adventure</span>
+            <h2 class="section-title">What's Your Next Move?</h2>
+          </div>
+
+          <div class="choice-flow">
+            <div class="choice-option">
+              <h3>I want to make money</h3>
+              <p>Build sustainable websites that generate revenue</p>
+              <button class="choice-btn" onclick="selectPath('money')">Choose This Path →</button>
+            </div>
+
+            <div class="choice-divider">OR</div>
+
+            <div class="choice-option">
+              <h3>I want to impress people</h3>
+              <p>Create mind-bending, viral, unforgettable experiences</p>
+              <button class="choice-btn" onclick="selectPath('impress')">Choose This Path →</button>
+            </div>
+
+            <div class="choice-divider">OR</div>
+
+            <div class="choice-option">
+              <h3>I just want to have fun</h3>
+              <p>Build weird, pranky, hilarious projects nobody asked for</p>
+              <button class="choice-btn" onclick="selectPath('fun')">Choose This Path →</button>
+            </div>
+          </div>
+
+          <div id="path-result" class="path-result hidden">
+            <div class="result-card glass-card">
+              <h3 id="result-title"></h3>
+              <p id="result-text"></p>
+              <button class="reset-btn" onclick="resetPath()">← Choose Again</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE DEMO MODAL -->
+      <div id="demo-modal" class="modal hidden">
+        <div class="modal-content">
+          <button class="close-modal" onclick="closeDemo()">✕</button>
+          <div id="demo-body"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div class="footer-col">
+          <div class="footer-logo">BuildWebs</div>
+          <p>Learn to break the internet. Legally.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#categories">All Categories</a></li>
+            <li><a href="#categories">3D Effects</a></li>
+            <li><a href="#pranks">Pranks</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="#showcase">What Websites Can Do</a></li>
+            <li><a href="#loopholes">Legal Loopholes</a></li>
+            <li><a href="#choices">Choose Your Path</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 BuildWebs. Make websites. Break reality. Legally.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
