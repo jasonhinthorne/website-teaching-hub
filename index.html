@@ -24,12 +24,12 @@
       <nav class="nav container">
         <div class="logo glitch" data-text="BuildWebs">BuildWebs</div>
         <div class="nav-links">
-          <a href="#categories" class="nav-link">Categories</a>
+          <a href="#build-ideas" class="nav-link">Build Ideas</a>
+          <a href="#prompt-flow" class="nav-link">Prompts</a>
           <a href="#pranks" class="nav-link">Pranks</a>
-          <a href="#loopholes" class="nav-link">Loopholes</a>
           <a href="#showcase" class="nav-link">Showcase</a>
         </div>
-        <button class="nav-button flip-button">Start Chaos</button>
+        <button class="nav-button flip-button">Start Building</button>
       </nav>
     </header>
 
@@ -38,37 +38,36 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow floating">Learn to Build Websites</span>
+            <span class="eyebrow floating">For ages 14-18</span>
             <h1 class="hero-title glitch-text">
-              Websites that break the internet <span class="flip-text">reality</span>
+              Build websites that <span class="flip-text">actually matter</span>
             </h1>
             <p class="hero-description">
-              Master 3D effects, impossible interactions, harmless pranks, and
-              legal loopholes. Learn what websites can actually do when you
-              think outside the box.
+              Pick a project idea, follow step-by-step prompts, and build something real.
+              Games, businesses, portfolios, pranks—whatever you can imagine, you can build.
             </p>
 
             <div class="hero-actions">
-              <button class="primary-btn pulse-btn" onclick="scrollToSection('categories')">
-                Explore Madness
+              <button class="primary-btn pulse-btn" onclick="scrollToSection('build-ideas')">
+                Pick Your Idea
               </button>
               <button class="secondary-btn reveal-btn" onclick="revealSecret()">
-                Reveal Secret
+                How This Works
               </button>
             </div>
 
             <div class="stats rotating">
               <div class="stat-item">
-                <strong class="counter" data-target="8">0</strong>
-                <span>Categories</span>
-              </div>
-              <div class="stat-item">
-                <strong class="counter" data-target="15">0</strong>
-                <span>Pranks</span>
-              </div>
-              <div class="stat-item">
                 <strong class="counter" data-target="12">0</strong>
-                <span>Loopholes</span>
+                <span>Project Ideas</span>
+              </div>
+              <div class="stat-item">
+                <strong class="counter" data-target="3">0</strong>
+                <span>Difficulty Levels</span>
+              </div>
+              <div class="stat-item">
+                <strong class="counter" data-target="1">0</strong>
+                <span>You. Building.</span>
               </div>
             </div>
           </div>
@@ -88,129 +87,273 @@
         </div>
       </section>
 
-      <!-- INTERACTIVE CATEGORY SELECTOR -->
-      <section id="categories" class="categories section">
+      <!-- BUILD YOUR IDEA SECTION -->
+      <section id="build-ideas" class="build-ideas section">
         <div class="container">
           <div class="section-heading">
-            <span class="eyebrow">What Do You Want to Build?</span>
-            <h2 class="section-title">Pick Your Poison</h2>
+            <span class="eyebrow">Pick A Project</span>
+            <h2 class="section-title">What Do You Want to Build?</h2>
+            <p class="section-subtitle">Start with a broad idea. We'll give you step-by-step prompts to guide you from zero to done.</p>
           </div>
 
-          <div class="category-selector">
-            <div class="selector-buttons">
-              <button class="selector-btn active" data-category="all">All</button>
-              <button class="selector-btn" data-category="practical">Practical</button>
-              <button class="selector-btn" data-category="wild">Wild Ideas</button>
-              <button class="selector-btn" data-category="money">Make Money</button>
-            </div>
+          <div class="difficulty-filter">
+            <button class="filter-btn active" data-filter="all">All Levels</button>
+            <button class="filter-btn" data-filter="beginner">🟢 Beginner</button>
+            <button class="filter-btn" data-filter="intermediate">🟡 Intermediate</button>
+            <button class="filter-btn" data-filter="advanced">🔴 Advanced</button>
           </div>
 
-          <div class="category-grid">
-            <div class="category-card 3d-card practical" data-category="practical">
-              <div class="card-inner">
-                <span class="icon">📱</span>
-                <h3>App Development</h3>
-                <p>Build tools, dashboards, and features that people actually use.</p>
-                <div class="card-tags">
-                  <span class="tag">Practical</span>
-                  <span class="tag">Job Ready</span>
+          <div class="ideas-grid">
+            <!-- BROAD IDEA CARDS -->
+            <div class="idea-card beginner" data-filter="beginner">
+              <div class="idea-header">
+                <span class="idea-icon">🎮</span>
+                <div>
+                  <h3>Build a Game</h3>
+                  <span class="difficulty-badge">🟢 Beginner Friendly</span>
                 </div>
+              </div>
+              <p>Create an interactive game right in the browser. Tic-tac-toe, memory match, or something wild.</p>
+              <div class="idea-examples">
+                <span class="example-tag">Tic-Tac-Toe</span>
+                <span class="example-tag">Memory Game</span>
+                <span class="example-tag">Click Racing</span>
+              </div>
+              <button class="idea-btn" onclick="startPromptFlow('game', 'beginner')">Start Building →</button>
+            </div>
+
+            <div class="idea-card beginner" data-filter="beginner">
+              <div class="idea-header">
+                <span class="idea-icon">👟</span>
+                <div>
+                  <h3>Start a Business Site</h3>
+                  <span class="difficulty-badge">🟢 Beginner Friendly</span>
+                </div>
+              </div>
+              <p>Build a fake (or real) business. Shoe store, pizza shop, tutoring service, anything you want to sell.</p>
+              <div class="idea-examples">
+                <span class="example-tag">E-Commerce</span>
+                <span class="example-tag">Local Business</span>
+                <span class="example-tag">Services</span>
+              </div>
+              <button class="idea-btn" onclick="startPromptFlow('business', 'beginner')">Start Building →</button>
+            </div>
+
+            <div class="idea-card beginner" data-filter="beginner">
+              <div class="idea-header">
+                <span class="idea-icon">🌐</span>
+                <div>
+                  <h3>Build a Generic Website</h3>
+                  <span class="difficulty-badge">🟢 Beginner Friendly</span>
+                </div>
+              </div>
+              <p>Clean, simple, powerful. A portfolio, blog, info site, or anything that tells a story with images and text.</p>
+              <div class="idea-examples">
+                <span class="example-tag">Portfolio</span>
+                <span class="example-tag">Blog</span>
+                <span class="example-tag">Landing Page</span>
+              </div>
+              <button class="idea-btn" onclick="startPromptFlow('generic', 'beginner')">Start Building →</button>
+            </div>
+
+            <div class="idea-card beginner" data-filter="beginner">
+              <div class="idea-header">
+                <span class="idea-icon">🎨</span>
+                <div>
+                  <h3>Design Your Brand</h3>
+                  <span class="difficulty-badge">🟢 Beginner Friendly</span>
+                </div>
+              </div>
+              <p>Create a personal brand site. Show off your art, music, content, or personality to the world.</p>
+              <div class="idea-examples">
+                <span class="example-tag">Artist Portfolio</span>
+                <span class="example-tag">Content Creator</span>
+                <span class="example-tag">Musician Page</span>
+              </div>
+              <button class="idea-btn" onclick="startPromptFlow('brand', 'beginner')">Start Building →</button>
+            </div>
+
+            <div class="idea-card intermediate" data-filter="intermediate">
+              <div class="idea-header">
+                <span class="idea-icon">📊</span>
+                <div>
+                  <h3>Build a Dashboard</h3>
+                  <span class="difficulty-badge">🟡 Intermediate</span>
+                </div>
+              </div>
+              <p>Create a tracking tool. Score tracker, habit tracker, budget planner, or fitness dashboard with real interactions.</p>
+              <div class="idea-examples">
+                <span class="example-tag">Habit Tracker</span>
+                <span class="example-tag">Grade Tracker</span>
+                <span class="example-tag">Fitness Log</span>
+              </div>
+              <button class="idea-btn" onclick="startPromptFlow('dashboard', 'intermediate')">Start Building →</button>
+            </div>
+
+            <div class="idea-card intermediate" data-filter="intermediate">
+              <div class="idea-header">
+                <span class="idea-icon">🎯</span>
+                <div>
+                  <h3>Make a Quiz or Survey</h3>
+                  <span class="difficulty-badge">🟡 Intermediate</span>
+                </div>
+              </div>
+              <p>Build an interactive quiz with scoring, results, and instant feedback. Fun AND useful.</p>
+              <div class="idea-examples">
+                <span class="example-tag">Personality Quiz</span>
+                <span class="example-tag">Knowledge Test</span>
+                <span class="example-tag">Quick Polls</span>
+              </div>
+              <button class="idea-btn" onclick="startPromptFlow('quiz', 'intermediate')">Start Building →</button>
+            </div>
+
+            <div class="idea-card intermediate" data-filter="intermediate">
+              <div class="idea-header">
+                <span class="idea-icon">🌍</span>
+                <div>
+                  <h3>Create a Social Idea</h3>
+                  <span class="difficulty-badge">🟡 Intermediate</span>
+                </div>
+              </div>
+              <p>Build a mini social network. Share posts, follow users, like things, comment, or build a community platform.</p>
+              <div class="idea-examples">
+                <span class="example-tag">Social Feed</span>
+                <span class="example-tag">Community Hub</span>
+                <span class="example-tag">Forum/Comments</span>
+              </div>
+              <button class="idea-btn" onclick="startPromptFlow('social', 'intermediate')">Start Building →</button>
+            </div>
+
+            <div class="idea-card advanced" data-filter="advanced">
+              <div class="idea-header">
+                <span class="idea-icon">🚀</span>
+                <div>
+                  <h3>Build an App</h3>
+                  <span class="difficulty-badge">🔴 Advanced</span>
+                </div>
+              </div>
+              <p>Go full app. Login system, database, save user data, real-time updates. This is a real product.</p>
+              <div class="idea-examples">
+                <span class="example-tag">Task Manager</span>
+                <span class="example-tag">Chat App</span>
+                <span class="example-tag">Collaboration Tool</span>
+              </div>
+              <button class="idea-btn" onclick="startPromptFlow('app', 'advanced')">Start Building →</button>
+            </div>
+
+            <div class="idea-card advanced" data-filter="advanced">
+              <div class="idea-header">
+                <span class="idea-icon">🎬</span>
+                <div>
+                  <h3>Make Immersive Experience</h3>
+                  <span class="difficulty-badge">🔴 Advanced</span>
+                </div>
+              </div>
+              <p>3D effects, animations, parallax scrolling, interactive storytelling. Push the browser to its limits.</p>
+              <div class="idea-examples">
+                <span class="example-tag">3D Showcase</span>
+                <span class="example-tag">Interactive Story</span>
+                <span class="example-tag">Animated Portfolio</span>
+              </div>
+              <button class="idea-btn" onclick="startPromptFlow('immersive', 'advanced')">Start Building →</button>
+            </div>
+
+            <div class="idea-card advanced" data-filter="advanced">
+              <div class="idea-header">
+                <span class="idea-icon">🤖</span>
+                <div>
+                  <h3>AI-Powered Project</h3>
+                  <span class="difficulty-badge">🔴 Advanced</span>
+                </div>
+              </div>
+              <p>Integrate AI into your site. ChatGPT, image generation, voice recognition, or predictive features.</p>
+              <div class="idea-examples">
+                <span class="example-tag">AI Chat</span>
+                <span class="example-tag">Image Gen</span>
+                <span class="example-tag">Smart Tool</span>
+              </div>
+              <button class="idea-btn" onclick="startPromptFlow('ai', 'advanced')">Start Building →</button>
+            </div>
+
+            <div class="idea-card beginner" data-filter="beginner">
+              <div class="idea-header">
+                <span class="idea-icon">🤣</span>
+                <div>
+                  <h3>Build a Prank Site</h3>
+                  <span class="difficulty-badge">🟢 Beginner Friendly</span>
+                </div>
+              </div>
+              <p>Make something hilarious. Fake screens, pranks, useless-but-funny tools that make people laugh.</p>
+              <div class="idea-examples">
+                <span class="example-tag">Funny Tools</span>
+                <span class="example-tag">Pranks</span>
+                <span class="example-tag">Jokes & Tricks</span>
+              </div>
+              <button class="idea-btn" onclick="startPromptFlow('prank', 'beginner')">Start Building →</button>
+            </div>
+
+            <div class="idea-card intermediate" data-filter="intermediate">
+              <div class="idea-header">
+                <span class="idea-icon">✨</span>
+                <div>
+                  <h3>Experiment & Explore</h3>
+                  <span class="difficulty-badge">🟡 Intermediate</span>
+                </div>
+              </div>
+              <p>No rules. Use APIs, build something weird, try new tech, or combine random ideas into something unexpected.</p>
+              <div class="idea-examples">
+                <span class="example-tag">API Integration</span>
+                <span class="example-tag">Wild Idea</span>
+                <span class="example-tag">Tech Mashup</span>
+              </div>
+              <button class="idea-btn" onclick="startPromptFlow('experiment', 'intermediate')">Start Building →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROMPT FLOW SECTION -->
+      <section id="prompt-flow" class="prompt-flow section alt-bg">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Step-by-Step Guidance</span>
+            <h2 class="section-title">Follow the Prompts</h2>
+            <p class="section-subtitle">Answer these questions to turn your idea into a real project.</p>
+          </div>
+
+          <div id="prompt-container" class="prompt-container">
+            <div class="prompt-steps">
+              <div class="step-indicator">
+                <span id="step-number">1</span> / <span id="step-total">7</span>
               </div>
             </div>
 
-            <div class="category-card 3d-card practical" data-category="practical">
-              <div class="card-inner">
-                <span class="icon">🌐</span>
-                <h3>Social Media</h3>
-                <p>Create communities, platforms, and viral experiences.</p>
-                <div class="card-tags">
-                  <span class="tag">Practical</span>
-                  <span class="tag">Growth</span>
-                </div>
+            <div class="prompt-card" id="current-prompt">
+              <h3 id="prompt-title"></h3>
+              <p id="prompt-description"></p>
+              <div id="prompt-input-area"></div>
+              <div class="prompt-actions">
+                <button class="prompt-btn prev-btn" onclick="previousPrompt()">← Back</button>
+                <button class="prompt-btn next-btn" onclick="nextPrompt()">Next →</button>
               </div>
             </div>
 
-            <div class="category-card 3d-card wild" data-category="wild">
-              <div class="card-inner">
-                <span class="icon">🎮</span>
-                <h3>Games</h3>
-                <p>Browser games, interactive playgrounds, and impossible mechanics.</p>
-                <div class="card-tags">
-                  <span class="tag">Wild</span>
-                  <span class="tag">Fun</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="category-card 3d-card money" data-category="money">
-              <div class="card-inner">
-                <span class="icon">💼</span>
-                <h3>Business Models</h3>
-                <p>Learn how websites make money and scale to millions.</p>
-                <div class="card-tags">
-                  <span class="tag">Money</span>
-                  <span class="tag">Scale</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="category-card 3d-card money" data-category="money">
-              <div class="card-inner">
-                <span class="icon">💸</span>
-                <h3>Buying & Selling</h3>
-                <p>Ecommerce, marketplaces, and online transaction magic.</p>
-                <div class="card-tags">
-                  <span class="tag">Money</span>
-                  <span class="tag">Ecom</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="category-card 3d-card wild" data-category="wild">
-              <div class="card-inner">
-                <span class="icon">😄</span>
-                <h3>Just for Fun</h3>
-                <p>Weird, playful, and delightfully useless websites.</p>
-                <div class="card-tags">
-                  <span class="tag">Wild</span>
-                  <span class="tag">Humor</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="category-card 3d-card wild" data-category="wild">
-              <div class="card-inner">
-                <span class="icon">🎯</span>
-                <h3>Nuanced Niches</h3>
-                <p>Hyper-specific communities and vertical markets.</p>
-                <div class="card-tags">
-                  <span class="tag">Wild</span>
-                  <span class="tag">Niche</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="category-card 3d-card practical" data-category="practical">
-              <div class="card-inner">
-                <span class="icon">✨</span>
-                <h3>Other</h3>
-                <p>Experiments, pranks, and ideas that don't fit boxes.</p>
-                <div class="card-tags">
-                  <span class="tag">Practical</span>
-                  <span class="tag">Wild</span>
-                </div>
-              </div>
+            <div id="prompt-result" class="prompt-result hidden">
+              <h3>Your Project Blueprint</h3>
+              <div id="blueprint-content"></div>
+              <button class="primary-btn" onclick="downloadBlueprint()">Download Your Plan</button>
+              <button class="secondary-btn" onclick="resetPromptFlow()">Start Over</button>
             </div>
           </div>
         </div>
       </section>
 
       <!-- PRANKS SECTION -->
-      <section id="pranks" class="pranks section alt-bg">
+      <section id="pranks" class="pranks section">
         <div class="container">
           <div class="section-heading">
-            <span class="eyebrow">🤣 Harmless Pranks You Can Build</span>
-            <h2 class="section-title">Make People Smile (and Confused)</h2>
+            <span class="eyebrow">🤣 Pranks & Cool Effects</span>
+            <h2 class="section-title">Learn By Making People Laugh</h2>
           </div>
 
           <div class="pranks-grid">
@@ -321,274 +464,184 @@
         </div>
       </section>
 
-      <!-- LOOPHOLES SECTION -->
-      <section id="loopholes" class="loopholes section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">🕳️ Legal Loopholes & Exploitable Ideas</span>
-            <h2 class="section-title">How Websites Bend Rules (Legally)</h2>
-          </div>
-
-          <div class="accordion">
-            <div class="accordion-item">
-              <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>✅ The "Free Trial" Loophole</span>
-                <span class="indicator">→</span>
-              </button>
-              <div class="accordion-content hidden">
-                <div class="content-inner">
-                  <p>
-                    Offer a free trial that requires no credit card upfront. When it converts to paid, most users forget to cancel. Legal? Yes, if you tell them. Smart? Absolutely.
-                  </p>
-                  <p><strong>Example:</strong> Netflix, Spotify, every SaaS ever.</p>
-                  <p>
-                    <strong>How to implement:</strong> Freemium model + email reminders + one-click cancel.
-                  </p>
-                  <code>// Track trial end date, auto-convert on day 31</code>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>📧 The "Pre-checked Boxes" Loophole</span>
-                <span class="indicator">→</span>
-              </button>
-              <div class="accordion-content hidden">
-                <div class="content-inner">
-                  <p>
-                    You can pre-check boxes for marketing emails or upsells. The law says you need consent, but if it's unchecked by default and the user checks it, that's consent.
-                  </p>
-                  <p><strong>Ethical Move:</strong> Keep them unchecked. More consent = better brand.</p>
-                  <code>// &lt;input type="checkbox"&gt; // NOT checked by default</code>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>💰 The "Price Anchoring" Loophole</span>
-                <span class="indicator">→</span>
-              </button>
-              <div class="accordion-content hidden">
-                <div class="content-inner">
-                  <p>
-                    Show the "full price" crossed out next to your actual price. Humans think they're getting a deal even if you just made up that number. It's psychological manipulation that's totally legal.
-                  </p>
-                  <p>
-                    <strong>Example:</strong> ~~$99~~ Now just $29/month! (You invented the $99 price.)
-                  </p>
-                  <code>// &lt;span style="text-decoration: line-through"&gt;$99&lt;/span&gt;</code>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>🤖 The "Bot Traffic" Loophole</span>
-                <span class="indicator">→</span>
-              </button>
-              <div class="accordion-content hidden">
-                <div class="content-inner">
-                  <p>
-                    You can inflate your traffic numbers by generating fake pageviews with JavaScript. Technically illegal for ad fraud, but for your own metrics? Nobody knows.
-                  </p>
-                  <p>
-                    <strong>Better idea:</strong> Use bots to test your own site and track real user behavior instead.
-                  </p>
-                  <code>// Don't actually do this lol</code>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>🔐 The "GDPR Cookie" Loophole</span>
-                <span class="indicator">→</span>
-              </button>
-              <div class="accordion-content hidden">
-                <div class="content-inner">
-                  <p>
-                    You technically need cookie consent, but you can make the "Reject" button tiny and the "Accept" button huge. It's in a legal grey area but some sites do it anyway.
-                  </p>
-                  <p><strong>Smart Play:</strong> Make both buttons equal size and obvious. Better UX + legal protection.</p>
-                  <code>// Make both CTA buttons equally prominent</code>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>⭐ The "Fake Reviews" Loophole</span>
-                <span class="indicator">→</span>
-              </button>
-              <div class="accordion-content hidden">
-                <div class="content-inner">
-                  <p>
-                    Show fake testimonials and reviews. If you're a startup with no real users, you can write them yourself (but you can't claim they're real).
-                  </p>
-                  <p><strong>Legal way:</strong> Use stock photos and generic quotes as "examples" or "testimonials from similar users."</p>
-                  <code>// Make it clear these are examples, not real reviews</code>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>📱 The "Mobile-Only Upsell" Loophole</span>
-                <span class="indicator">→</span>
-              </button>
-              <div class="accordion-content hidden">
-                <div class="content-inner">
-                  <p>
-                    Show your premium feature ONLY on mobile, where people are more likely to impulse buy. Hide the pricing on desktop.
-                  </p>
-                  <p><strong>How:</strong> Use CSS media queries to show/hide pricing and features.</p>
-                  <code>// @media (max-width: 768px) { show premium cta }</code>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- SHOWCASE SECTION -->
       <section id="showcase" class="showcase section alt-bg">
         <div class="container">
           <div class="section-heading">
-            <span class="eyebrow">🚀 What Websites Can ACTUALLY Do</span>
-            <h2 class="section-title">Reality Bending Features</h2>
+            <span class="eyebrow">🚀 What You Can Actually Build</span>
+            <h2 class="section-title">Cool Features to Add</h2>
+            <p class="section-subtitle">These are real things. You can learn to build them all.</p>
           </div>
 
           <div class="showcase-grid">
             <div class="showcase-item glass-card">
-              <div class="showcase-badge">3D Magic</div>
-              <h3>3D Rendering in Browser</h3>
-              <p>WebGL and Three.js let you render full 3D models, spin products, and create impossible visuals—all in the browser.</p>
+              <div class="showcase-badge">Interactive</div>
+              <h3>Real-Time Updates</h3>
+              <p>Make things happen instantly. Forms that work, buttons that do stuff, data that saves.</p>
               <div class="feature-list">
-                <span>✓ Real-time 3D</span>
-                <span>✓ Physics Engine</span>
-                <span>✓ Lighting</span>
+                <span>✓ Click handlers</span>
+                <span>✓ Form validation</span>
+                <span>✓ Data storage</span>
               </div>
             </div>
 
             <div class="showcase-item glass-card">
-              <div class="showcase-badge">AI Powers</div>
-              <h3>AI Integration</h3>
-              <p>Chat with ChatGPT, generate images, transcribe audio—all from your website without a backend.</p>
+              <div class="showcase-badge">Design</div>
+              <h3>Smooth Animations</h3>
+              <p>Make your site feel alive. Fade in, slide in, bounce, rotate—all in CSS and JS.</p>
               <div class="feature-list">
-                <span>✓ GPT-4 API</span>
-                <span>✓ Image Gen</span>
+                <span>✓ CSS animations</span>
+                <span>✓ Transitions</span>
+                <span>✓ Scroll effects</span>
+              </div>
+            </div>
+
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">Hardware</div>
+              <h3>Use Your Phone's Powers</h3>
+              <p>Access camera, location, motion sensors, and more. Make your site actually use device features.</p>
+              <div class="feature-list">
+                <span>✓ Camera access</span>
+                <span>✓ Location tracking</span>
+                <span>✓ Motion sensors</span>
+              </div>
+            </div>
+
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">Offline</div>
+              <h3>Works Without Internet</h3>
+              <p>Cache your site so it loads offline. Users can keep using it even if wifi dies.</p>
+              <div class="feature-list">
+                <span>✓ Service workers</span>
+                <span>✓ Local storage</span>
+                <span>✓ Offline first</span>
+              </div>
+            </div>
+
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">Real-Time</div>
+              <h3>Live Multiplayer</h3>
+              <p>Make games or apps where multiple people interact in real-time. Everyone sees updates instantly.</p>
+              <div class="feature-list">
+                <span>✓ WebSockets</span>
+                <span>✓ Live chat</span>
+                <span>✓ Multiplayer games</span>
+              </div>
+            </div>
+
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">Money</div>
+              <h3>Accept Real Payments</h3>
+              <p>Take payments directly on your site. Stripe, PayPal, Apple Pay—it all works in the browser.</p>
+              <div class="feature-list">
+                <span>✓ Stripe payments</span>
+                <span>✓ Apple/Google Pay</span>
+                <span>✓ Instant receipts</span>
+              </div>
+            </div>
+
+            <div class="showcase-item glass-card">
+              <div class="showcase-badge">Smart</div>
+              <h3>AI & Machine Learning</h3>
+              <p>Add intelligence. Chat with AI, generate images, predict things, or automate tasks.</p>
+              <div class="feature-list">
+                <span>✓ ChatGPT API</span>
+                <span>✓ Image gen</span>
                 <span>✓ Voice AI</span>
               </div>
             </div>
 
             <div class="showcase-item glass-card">
-              <div class="showcase-badge">Hardware Access</div>
-              <h3>Device Control</h3>
-              <p>Access camera, microphone, GPS, accelerometer, and vibration—turning your phone into an extension of the website.</p>
+              <div class="showcase-badge">3D</div>
+              <h3>3D & WebGL</h3>
+              <p>Render 3D graphics in the browser. Spin products, make games, or create impossible visuals.</p>
               <div class="feature-list">
-                <span>✓ Camera Access</span>
-                <span>✓ Geolocation</span>
-                <span>✓ Vibration</span>
-              </div>
-            </div>
-
-            <div class="showcase-item glass-card">
-              <div class="showcase-badge">Offline Magic</div>
-              <h3>Works Offline</h3>
-              <p>Service Workers cache your entire app. Users can work offline and sync when reconnected.</p>
-              <div class="feature-list">
-                <span>✓ Service Workers</span>
-                <span>✓ Local Storage</span>
-                <span>✓ IndexedDB</span>
-              </div>
-            </div>
-
-            <div class="showcase-item glass-card">
-              <div class="showcase-badge">Real-time Sync</div>
-              <h3>Live Multiplayer</h3>
-              <p>WebSockets and WebRTC enable real-time collaboration, live chats, and multiplayer games—pure browser magic.</p>
-              <div class="feature-list">
-                <span>✓ WebSockets</span>
-                <span>✓ WebRTC</span>
-                <span>✓ Live Updates</span>
-              </div>
-            </div>
-
-            <div class="showcase-item glass-card">
-              <div class="showcase-badge">Money Magic</div>
-              <h3>Built-in Payments</h3>
-              <p>Accept payments directly in the browser with Stripe, PayPal, Apple Pay, and Google Pay—no backend needed.</p>
-              <div class="feature-list">
-                <span>✓ Stripe</span>
-                <span>✓ Apple Pay</span>
-                <span>✓ Google Pay</span>
-              </div>
-            </div>
-
-            <div class="showcase-item glass-card">
-              <div class="showcase-badge">Blockchain</div>
-              <h3>Web3 & Crypto</h3>
-              <p>Connect to wallets, mint NFTs, and interact with smart contracts directly from your website.</p>
-              <div class="feature-list">
-                <span>✓ Wallet Connect</span>
-                <span>✓ NFT Minting</span>
-                <span>✓ Smart Contracts</span>
-              </div>
-            </div>
-
-            <div class="showcase-item glass-card">
-              <div class="showcase-badge">Impossible UX</div>
-              <h3>Mind-Bending Interfaces</h3>
-              <p>Animation, parallax, scroll hijacking, and 3D CSS transforms create experiences impossible on other platforms.</p>
-              <div class="feature-list">
-                <span>✓ GSAP</span>
-                <span>✓ Framer Motion</span>
-                <span>✓ 3D CSS</span>
+                <span>✓ Three.js</span>
+                <span>✓ WebGL</span>
+                <span>✓ 3D models</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- INTERACTIVE CHOICE FLOW -->
-      <section class="choices section">
+      <!-- LEARNING ROADMAP -->
+      <section class="roadmap section">
         <div class="container">
           <div class="section-heading">
-            <span class="eyebrow">Choose Your Adventure</span>
-            <h2 class="section-title">What's Your Next Move?</h2>
+            <span class="eyebrow">Your Learning Path</span>
+            <h2 class="section-title">Beginner → Advanced</h2>
+            <p class="section-subtitle">This is how you go from zero to hero.</p>
           </div>
 
-          <div class="choice-flow">
-            <div class="choice-option">
-              <h3>I want to make money</h3>
-              <p>Build sustainable websites that generate revenue</p>
-              <button class="choice-btn" onclick="selectPath('money')">Choose This Path →</button>
+          <div class="roadmap-grid">
+            <div class="roadmap-phase">
+              <h3>Phase 1: Beginner 🟢</h3>
+              <div class="phase-content">
+                <p><strong>What you'll learn:</strong></p>
+                <ul>
+                  <li>HTML basics (elements, structure)</li>
+                  <li>CSS styling (colors, fonts, layout)</li>
+                  <li>JavaScript basics (variables, functions)</li>
+                  <li>Events (clicks, form submissions)</li>
+                </ul>
+                <p><strong>You'll build:</strong></p>
+                <ul>
+                  <li>Your first website</li>
+                  <li>A simple game</li>
+                  <li>A working form</li>
+                  <li>Something you're proud of</li>
+                </ul>
+                <p style="margin-top: 15px; color: var(--accent); font-weight: 600;">
+                  ⏱️ 2-4 weeks to get here
+                </p>
+              </div>
             </div>
 
-            <div class="choice-divider">OR</div>
-
-            <div class="choice-option">
-              <h3>I want to impress people</h3>
-              <p>Create mind-bending, viral, unforgettable experiences</p>
-              <button class="choice-btn" onclick="selectPath('impress')">Choose This Path →</button>
+            <div class="roadmap-phase">
+              <h3>Phase 2: Intermediate 🟡</h3>
+              <div class="phase-content">
+                <p><strong>What you'll learn:</strong></p>
+                <ul>
+                  <li>More complex JavaScript</li>
+                  <li>APIs (fetch, async/await)</li>
+                  <li>Local storage & databases</li>
+                  <li>Responsive design & mobile</li>
+                </ul>
+                <p><strong>You'll build:</strong></p>
+                <ul>
+                  <li>A dashboard with data</li>
+                  <li>A social-style app</li>
+                  <li>Something with real user features</li>
+                  <li>A mini app you can show employers</li>
+                </ul>
+                <p style="margin-top: 15px; color: var(--warning); font-weight: 600;">
+                  ⏱️ 1-3 months from beginner
+                </p>
+              </div>
             </div>
 
-            <div class="choice-divider">OR</div>
-
-            <div class="choice-option">
-              <h3>I just want to have fun</h3>
-              <p>Build weird, pranky, hilarious projects nobody asked for</p>
-              <button class="choice-btn" onclick="selectPath('fun')">Choose This Path →</button>
-            </div>
-          </div>
-
-          <div id="path-result" class="path-result hidden">
-            <div class="result-card glass-card">
-              <h3 id="result-title"></h3>
-              <p id="result-text"></p>
-              <button class="reset-btn" onclick="resetPath()">← Choose Again</button>
+            <div class="roadmap-phase">
+              <h3>Phase 3: Advanced 🔴</h3>
+              <div class="phase-content">
+                <p><strong>What you'll learn:</strong></p>
+                <ul>
+                  <li>Frameworks (React, Vue)</li>
+                  <li>Backend basics (Node.js)</li>
+                  <li>Real databases (Firebase)</li>
+                  <li>Deployment & DevOps</li>
+                </ul>
+                <p><strong>You'll build:</strong></p>
+                <ul>
+                  <li>A full-stack app</li>
+                  <li>Something with login</li>
+                  <li>A real product</li>
+                  <li>Your startup idea</li>
+                </ul>
+                <p style="margin-top: 15px; color: var(--danger); font-weight: 600;">
+                  ⏱️ 3-6 months from intermediate
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -607,27 +660,27 @@
       <div class="container footer-wrap">
         <div class="footer-col">
           <div class="footer-logo">BuildWebs</div>
-          <p>Learn to break the internet. Legally.</p>
+          <p>Made for 14-18 year olds who want to build something real.</p>
         </div>
         <div class="footer-col">
-          <h4>Categories</h4>
+          <h4>Start Here</h4>
           <ul>
-            <li><a href="#categories">All Categories</a></li>
-            <li><a href="#categories">3D Effects</a></li>
-            <li><a href="#pranks">Pranks</a></li>
+            <li><a href="#build-ideas">Pick an Idea</a></li>
+            <li><a href="#prompt-flow">Follow Prompts</a></li>
+            <li><a href="#showcase">See What's Possible</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Learn</h4>
           <ul>
-            <li><a href="#showcase">What Websites Can Do</a></li>
-            <li><a href="#loopholes">Legal Loopholes</a></li>
-            <li><a href="#choices">Choose Your Path</a></li>
+            <li><a href="#pranks">Pranks & Effects</a></li>
+            <li><a href="#roadmap">Learning Roadmap</a></li>
+            <li><a href="#">Resources & Docs</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 BuildWebs. Make websites. Break reality. Legally.</p>
+        <p>&copy; 2024 BuildWebs. For teens who want to build. No BS, just code.</p>
       </div>
     </footer>
 
